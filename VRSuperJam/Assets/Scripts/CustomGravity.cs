@@ -4,7 +4,6 @@ public class CustomGravity : MonoBehaviour
 {
     private Rigidbody rigidBody;
     private bool affectedByGravity;
-    private Vector3 gravityForce = new Vector3(0, GameManager.Instance.gravitySpeed, 0);
 
     void Awake()
     {
@@ -14,7 +13,7 @@ public class CustomGravity : MonoBehaviour
     void Update()
     {
         if (affectedByGravity) {
-            rigidBody.AddForce(gravityForce * Time.deltaTime, ForceMode.Force);
+            rigidBody.AddForce(GameManager.Instance.Gravity * Time.deltaTime, ForceMode.Force);
         }
     }
 

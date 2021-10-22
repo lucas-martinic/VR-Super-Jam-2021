@@ -2,9 +2,19 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public float gravitySpeed;
+    public float gravitySpeed = 100;
+    public Vector3 Gravity {
+        get {
+            if (gravityInverted) {
+                return new Vector3(0, gravitySpeed, 0);
+            } else {
+                return new Vector3(0, -gravitySpeed, 0);
+            }
+        }
+    }
     public static GameManager Instance;
-
+    public bool gravityInverted = false;
+    
     void Awake()
     {
         if(Instance == null) {
