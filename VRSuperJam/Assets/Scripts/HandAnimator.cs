@@ -6,7 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class HandAnimator : MonoBehaviour
 {
     public float speed = 5.0f;
-    public ActionBasedController controller = null;
+    public XRController controller = null;
     [SerializeField] private bool leftHand;
     private Animator animator = null;
 
@@ -26,7 +26,7 @@ public class HandAnimator : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        controller = GetComponentInParent<ActionBasedController>();
+        controller = GetComponentInParent<XRController>();
     }
 
     private void Update()
