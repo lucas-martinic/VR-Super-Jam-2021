@@ -2742,6 +2742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravitySpeed: 100
   gravityInverted: 0
+  gravityInsideSphere: 0
 --- !u!4 &1599942062
 Transform:
   m_ObjectHideFlags: 0

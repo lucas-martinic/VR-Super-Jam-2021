@@ -20,15 +20,25 @@ public class CustomGravity : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Gravity")) {
-            affectedByGravity = true;
+            if (GameManager.Instance.gravityInsideSphere) {
+                affectedByGravity = true;
+            } else {
+                affectedByGravity = false;
+                rigidBody.velocity = Vector3.zero;
+                rigidBody.angularVelocity = Vector3.zero;
+            }
         }
     }
 
     private void OnTriggerExit(Collider other) {
         if (other.CompareTag("Gravity")) {
-            affectedByGravity = false;
-            rigidBody.velocity = Vector3.zero;
-            rigidBody.angularVelocity = Vector3.zero;
+            if (GameManager.Instance.gravityInsideSphere) {
+                affectedByGravity = false;
+                rigidBody.velocity = Vector3.zero;
+                rigidBody.angularVelocity = Vector3.zero;
+            } else {
+                affectedByGravity = true;
+            }
         }
     }
 }

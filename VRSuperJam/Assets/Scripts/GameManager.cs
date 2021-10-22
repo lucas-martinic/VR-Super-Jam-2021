@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     }
     public static GameManager Instance;
     public bool gravityInverted = false;
+    public bool gravityInsideSphere = true;
     
     void Awake()
     {
