@@ -15,6 +15,9 @@ public class CustomGravity : MonoBehaviour
     {
         if (affectedByGravity || forceGravity) {
             rigidBody.AddForce(GameManager.Instance.Gravity * Time.deltaTime, ForceMode.Force);
+        } else {
+            rigidBody.velocity = Vector3.zero;
+            rigidBody.angularVelocity = Vector3.zero;
         }
     }
 
