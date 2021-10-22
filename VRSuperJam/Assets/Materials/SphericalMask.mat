@@ -24,7 +24,7 @@ Material:
         m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _ColorStrength: 2
+    - _ColorStrength: 2.5
     - _Glossiness: 0
     - _Metallic: 0
     - _Radius: 3.2

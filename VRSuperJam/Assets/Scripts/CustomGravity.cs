@@ -4,6 +4,7 @@ public class CustomGravity : MonoBehaviour
 {
     private Rigidbody rigidBody;
     private bool affectedByGravity;
+    [SerializeField] bool forceGravity;
 
     void Awake()
     {
@@ -12,7 +13,7 @@ public class CustomGravity : MonoBehaviour
 
     void Update()
     {
-        if (affectedByGravity) {
+        if (affectedByGravity || forceGravity) {
             rigidBody.AddForce(GameManager.Instance.Gravity * Time.deltaTime, ForceMode.Force);
         }
     }
