@@ -628,8 +628,9 @@ GameObject:
   - component: {fileID: 587232015}
   - component: {fileID: 587232014}
   - component: {fileID: 587232013}
+  - component: {fileID: 587232016}
   m_Layer: 7
-  m_Name: Cube (1)
+  m_Name: Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -681,7 +682,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5a4b48dafcdde0649b4c29c5c9be91dc, type: 2}
+  - {fileID: 2100000, guid: c67c215df8e94de44a3e543d00dbec72, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -711,6 +712,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587232011}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &587232016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587232011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 503a504cc16297342b4c3798d5cd8117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,17 +2088,9 @@ MonoBehaviour:
   assetGuid: 
   m_Mesh: {fileID: 1907306952}
   m_IsSelectable: 1
-  m_SelectedFaces: 1b000000
-  m_SelectedEdges:
-  - a: 120
-    b: 121
-  - a: 122
-    b: 120
-  - a: 121
-    b: 123
-  - a: 123
-    b: 122
-  m_SelectedVertices: 78000000790000007a0000007b000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!4 &920231560
 Transform:
   m_ObjectHideFlags: 0
@@ -2505,6 +2510,7 @@ MonoBehaviour:
   _softness: 0.5
   _smoothSpeed: 40
   _scaleFactor: 2
+  invisibleMaterial: {fileID: 2100000, guid: 5a4b48dafcdde0649b4c29c5c9be91dc, type: 2}
 --- !u!4 &1599942062
 Transform:
   m_ObjectHideFlags: 0

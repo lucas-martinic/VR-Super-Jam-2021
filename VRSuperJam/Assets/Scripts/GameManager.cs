@@ -32,6 +32,9 @@ public class GameManager : MonoBehaviour
     public float _smoothSpeed = 40;
     public float _scaleFactor = 2;
 
+    [Header("Materials")]
+    public Material invisibleMaterial;
+
     void Awake()
     {
         if(Instance == null) {
