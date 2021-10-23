@@ -23,7 +23,7 @@ public class FootStepScript : MonoBehaviour {
                 stepCounter += Vector3.Distance(transform.position, lastPos);
             }
             if(stepCounter >= stepRate) {
-                audioSource.pitch = 0.6f + Random.Range(-0.1f, 0.1f);
+                audioSource.pitch = 0.8f + Random.Range(-0.1f, 0.1f);
                 audioSource.PlayOneShot(footSteps[Random.Range(0, footSteps.Length)], 0.9f);
                 stepCounter = 0;
             }
