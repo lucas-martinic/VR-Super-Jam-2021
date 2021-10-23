@@ -7,12 +7,17 @@ public class ColorPoint : MonoBehaviour
 {
     [HideInInspector] public bool grounded = true;
     public float currentSize = 0;
+    private bool firstTimeGrabbed;
 
     Vector3 _mousePos, _smoothPoint;
     void Update()
     {
-        if (grounded) {
-            Grow();
+        if (firstTimeGrabbed) {
+            if (grounded) {
+                Grow();
+            } else {
+                Shrink();
+            }
         } else {
             Shrink();
         }
@@ -33,6 +38,11 @@ public class ColorPoint : MonoBehaviour
             currentSize = GameManager.Instance.sphereMaxSize;
         }
         SetValues();
+    }
+
+    internal void Grabbed() {
+        grounded = false;
+        firstTimeGrabbed = true;
     }
 
     private void SetValues() {
