@@ -7,6 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class LightEmitter : MonoBehaviour
 {
     private XRGrabInteractable interactable;
+    private AudioSource audioSource;
     [SerializeField] ColorPoint colorPoint;
 
     void Awake()
@@ -14,6 +15,10 @@ public class LightEmitter : MonoBehaviour
         interactable = GetComponentInParent<XRGrabInteractable>();
         interactable.selectEntered.AddListener(Grabbed);
         interactable.selectExited.AddListener(Released);
+        audioSource = GetComponent<AudioSource>();
+    }
+    private void Update() {
+        audioSource.volume = Mathf.Clamp01(colorPoint.currentSize);
     }
 
     private void Released(SelectExitEventArgs arg0) {

@@ -6,7 +6,7 @@ using UnityEngine;
 public class ColorPoint : MonoBehaviour
 {
     [HideInInspector] public bool grounded = true;
-    private float currentSize = 0;
+    public float currentSize = 0;
 
     Vector3 _mousePos, _smoothPoint;
     void Update()
