@@ -42,6 +42,6 @@ public class ColorPoint : MonoBehaviour
 
         Shader.SetGlobalVector("_GLOBALMaskPosition", transform.position);
         Shader.SetGlobalFloat("_GLOBALMaskRadius", _radius / 2);
-        Shader.SetGlobalFloat("_GLOBALMaskSoftness", _softness);
+        Shader.SetGlobalFloat("_GLOBALMaskSoftness", 0);
     }
 }
