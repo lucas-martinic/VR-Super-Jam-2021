@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class CustomGravity : MonoBehaviour
@@ -15,20 +16,15 @@ public class CustomGravity : MonoBehaviour
     {
         if (affectedByGravity || forceGravity) {
             rigidBody.AddForce(GameManager.Instance.Gravity * Time.deltaTime, ForceMode.Force);
-        } else {
-            rigidBody.velocity = Vector3.zero;
-            rigidBody.angularVelocity = Vector3.zero;
         }
     }
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Gravity")) {
             if (GameManager.Instance.gravityInsideSphere) {
-                affectedByGravity = true;
+                GravityOn();
             } else {
-                affectedByGravity = false;
-                rigidBody.velocity = Vector3.zero;
-                rigidBody.angularVelocity = Vector3.zero;
+                GravityOff();
             }
         }
     }
@@ -36,12 +32,26 @@ public class CustomGravity : MonoBehaviour
     private void OnTriggerExit(Collider other) {
         if (other.CompareTag("Gravity")) {
             if (GameManager.Instance.gravityInsideSphere) {
-                affectedByGravity = false;
-                rigidBody.velocity = Vector3.zero;
-                rigidBody.angularVelocity = Vector3.zero;
+                GravityOff();
             } else {
-                affectedByGravity = true;
+                GravityOn();
             }
         }
+    }
+
+    private void GravityOn() {
+        affectedByGravity = true;
+    }
+
+    private void GravityOff() {
+        affectedByGravity = false;
+        if (GameManager.Instance.randomPushUpwardsWhenGravityOff) {
+            StartCoroutine(ForceUp());
+        }
+    }
+
+    IEnumerator ForceUp() {
+        yield return new WaitForSeconds(Random.Range(0.3f, 0.6f));
+        rigidBody.AddForce(Vector3.up * Random.Range(1f, 3f));
     }
 }
