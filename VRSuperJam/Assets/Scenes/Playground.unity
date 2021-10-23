@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!64 &138824446 stripped
-MeshCollider:
-  m_CorrespondingSourceObject: {fileID: 4579788630909120693, guid: 351e9ed1f987916449cd312917edb0c1, type: 3}
-  m_PrefabInstance: {fileID: 4579788630778952267}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &180494286
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,7 +504,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh135568
+  m_Name: pb_Mesh-1208
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6002,22 +5997,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 537313298846719975, guid: 351e9ed1f987916449cd312917edb0c1, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3697390076509415380, guid: 351e9ed1f987916449cd312917edb0c1, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4579788630227042017, guid: 351e9ed1f987916449cd312917edb0c1, type: 3}
-      propertyPath: shrinkingSpeed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4579788630227042019, guid: 351e9ed1f987916449cd312917edb0c1, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
+    - target: {fileID: 271836967, guid: 351e9ed1f987916449cd312917edb0c1, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1490445526}
     - target: {fileID: 4579788630909120692, guid: 351e9ed1f987916449cd312917edb0c1, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -6029,10 +6012,6 @@ PrefabInstance:
     - target: {fileID: 4579788630909120694, guid: 351e9ed1f987916449cd312917edb0c1, type: 3}
       propertyPath: m_Name
       value: LightDevice
-      objectReference: {fileID: 0}
-    - target: {fileID: 4579788630909120694, guid: 351e9ed1f987916449cd312917edb0c1, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4579788630909120841, guid: 351e9ed1f987916449cd312917edb0c1, type: 3}
       propertyPath: m_RootOrder
@@ -6082,25 +6061,5 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 210053121}
-    - target: {fileID: 4579788630909120846, guid: 351e9ed1f987916449cd312917edb0c1, type: 3}
-      propertyPath: m_MovementType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4579788630909120846, guid: 351e9ed1f987916449cd312917edb0c1, type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 1490445526}
-    - target: {fileID: 4579788630909120846, guid: 351e9ed1f987916449cd312917edb0c1, type: 3}
-      propertyPath: m_Colliders.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4579788630909120846, guid: 351e9ed1f987916449cd312917edb0c1, type: 3}
-      propertyPath: m_Colliders.Array.data[0]
-      value: 
-      objectReference: {fileID: 138824446}
-    - target: {fileID: 4579788630909120847, guid: 351e9ed1f987916449cd312917edb0c1, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 351e9ed1f987916449cd312917edb0c1, type: 3}

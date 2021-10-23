@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4579788630227042018}
   - component: {fileID: 4579788630227042017}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ColorPoint
   m_TagString: Gravity
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sphere: {fileID: 4579788630227042019}
   maxSize: 4
-  shrinkingSpeed: 4
+  shrinkingSpeed: 8
   growingSpeed: 2
   grounded: 1
   _softness: 1
@@ -67,9 +67,9 @@ GameObject:
   - component: {fileID: 4579788630909120693}
   - component: {fileID: 4579788630909120847}
   - component: {fileID: 4579788630909120840}
-  - component: {fileID: 4579788630909120846}
   - component: {fileID: 4579788630909120845}
-  m_Layer: 0
+  - component: {fileID: 271836967}
+  m_Layer: 8
   m_Name: LightDevice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -733,7 +733,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &4579788630909120840
@@ -749,7 +749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceGravity: 1
---- !u!114 &4579788630909120846
+--- !u!114 &4579788630909120845
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -758,11 +758,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 4579788630909120694}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a3c2bd1ad37d5b40ba5ebbdbed11ee6, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e41e89053ed37f40baf3405d25f12be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorPoint: {fileID: 4579788630227042017}
+--- !u!114 &271836967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4579788630909120694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 4579788630909120693}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -820,7 +834,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_AttachEaseInTime: 0.15
-  m_MovementType: 1
+  m_MovementType: 2
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -855,19 +869,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &4579788630909120845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4579788630909120694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e41e89053ed37f40baf3405d25f12be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colorPoint: {fileID: 4579788630227042017}
 --- !u!1001 &4579788630954400389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -932,6 +933,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5117700066308340382, guid: 3dc88174b056a7c48a69a5d7e81b66fb, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -5117700066308340382, guid: 3dc88174b056a7c48a69a5d7e81b66fb, type: 3}
       propertyPath: m_TagString
       value: Gravity
       objectReference: {fileID: 0}
@@ -942,6 +947,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3dc88174b056a7c48a69a5d7e81b66fb, type: 3}
       propertyPath: m_Name
       value: Icosphere
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3dc88174b056a7c48a69a5d7e81b66fb, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dc88174b056a7c48a69a5d7e81b66fb, type: 3}
