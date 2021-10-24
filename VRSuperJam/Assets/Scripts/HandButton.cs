@@ -9,6 +9,7 @@ public class HandButton : XRBaseInteractable
     [SerializeField] private float yMin = 0.0f;
     [SerializeField] float yMax = 0.0f;
     private bool previousPress = false;
+    private AudioSource audioSource;
 
     private float previousHandHeight = 0.0f;
     private XRBaseInteractor hoverInteractor = null;
@@ -17,6 +18,7 @@ public class HandButton : XRBaseInteractable
         base.Awake();
         onHoverEntered.AddListener(StartPress);
         onHoverExited.AddListener(EndPress);
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnDestroy() {
@@ -76,6 +78,9 @@ public class HandButton : XRBaseInteractable
 
         if (inPosition && inPosition != previousPress) {
             OnPress.Invoke();
+            if (audioSource != null) {
+                audioSource.Play();
+            }
         }
         previousPress = inPosition;
     }

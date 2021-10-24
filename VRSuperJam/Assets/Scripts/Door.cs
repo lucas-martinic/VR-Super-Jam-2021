@@ -4,12 +4,14 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     [SerializeField] HandButton openButton;
+    private AudioSource audioSource;
     bool opened;
 
     // Start is called before the first frame update
     void Start()
     {
         openButton.OnPress.AddListener(OpenDoor);
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnDestroy() {
@@ -23,7 +25,10 @@ public class Door : MonoBehaviour
 
     IEnumerator Co_OpenDoor() {
         opened = true;
-        for (float i = 0; i < 2; i += Time.deltaTime) {
+        if(audioSource != null) {
+            audioSource.Play();
+        }
+        for (float i = 0; i < 1.5f; i += Time.deltaTime) {
             transform.position += transform.right * Time.deltaTime;
             yield return null;
         }
