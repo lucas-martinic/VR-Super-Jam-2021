@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class DoorButton : MonoBehaviour
+public class Door : MonoBehaviour
 {
     [SerializeField] HandButton openMechanism;
     private AudioSource audioSource;
@@ -25,7 +25,7 @@ public class DoorButton : MonoBehaviour
     }
 
     [ContextMenu("OpenDoor")]
-    private void OpenDoor() {
+    public void OpenDoor() {
         if(!opened)
             StartCoroutine(Co_OpenDoor());
     }
