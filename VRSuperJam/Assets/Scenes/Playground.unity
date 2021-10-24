@@ -11091,7 +11091,7 @@ MonoBehaviour:
   _smoothSpeed: 40
   _scaleFactor: 2
   invisibleMaterial: {fileID: 2100000, guid: 5a4b48dafcdde0649b4c29c5c9be91dc, type: 2}
-  decoloredMaterial: {fileID: 0}
+  decoloredMaterial: {fileID: 2100000, guid: a929add56cebdba41ba3056da9db0e45, type: 2}
 --- !u!4 &1599942062
 Transform:
   m_ObjectHideFlags: 0
