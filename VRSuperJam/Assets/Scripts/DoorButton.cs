@@ -3,9 +3,9 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class Door : MonoBehaviour
+public class DoorButton : MonoBehaviour
 {
-    [SerializeField] XRBaseInteractable openMechanism;
+    [SerializeField] HandButton openMechanism;
     private AudioSource audioSource;
     bool opened;
 
@@ -13,19 +13,19 @@ public class Door : MonoBehaviour
     void Start()
     {
         if(openMechanism != null) {
-            openMechanism.selectEntered.AddListener(OpenDoor);
+            openMechanism.OnPress.AddListener(OpenDoor);
         }
         audioSource = GetComponent<AudioSource>();
     }
 
     private void OnDestroy() {
         if (openMechanism != null) {
-            openMechanism.selectEntered.RemoveListener(OpenDoor);
+            openMechanism.OnPress.RemoveListener(OpenDoor);
         }
     }
 
     [ContextMenu("OpenDoor")]
-    private void OpenDoor(SelectEnterEventArgs arg0) {
+    private void OpenDoor() {
         if(!opened)
             StartCoroutine(Co_OpenDoor());
     }
