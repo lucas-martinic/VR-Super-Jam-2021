@@ -26,6 +26,6 @@ public class LightEmitter : MonoBehaviour
     }
 
     private void Grabbed(SelectEnterEventArgs arg0) {
-        colorPoint.grounded = false;
+        colorPoint.Grabbed();
     }
 }
