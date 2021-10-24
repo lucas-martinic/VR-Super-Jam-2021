@@ -9087,7 +9087,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\"Hold your \nfist\" against \nopression..."
+  m_text: "\"Hold your \nfist\" against \noppression..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a2395455de48de4e90b94e9d0724478, type: 2}
   m_sharedMaterial: {fileID: -3563743150703201633, guid: 6a2395455de48de4e90b94e9d0724478, type: 2}
@@ -9703,6 +9703,10 @@ PrefabInstance:
     - target: {fileID: 8170216167074486731, guid: 15906108ccc7749498d519a25e409943, type: 3}
       propertyPath: m_Name
       value: DoorKey
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170216167074486731, guid: 15906108ccc7749498d519a25e409943, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15906108ccc7749498d519a25e409943, type: 3}
