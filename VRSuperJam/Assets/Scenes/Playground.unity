@@ -1182,6 +1182,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8170216167074486726, guid: 15906108ccc7749498d519a25e409943, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8170216167074486731, guid: 15906108ccc7749498d519a25e409943, type: 3}
       propertyPath: m_Name
       value: DoorKey (1)
@@ -11004,6 +11008,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 4149620300161073343, guid: 48c359e805cb8e742979d24d9c4c865f, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5890188914863050254, guid: 48c359e805cb8e742979d24d9c4c865f, type: 3}
       propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -16575,7 +16583,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-209514
+  m_Name: pb_Mesh-3360
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17243,6 +17251,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorButton
       objectReference: {fileID: 0}
+    - target: {fileID: 6876552679761697108, guid: 61602b721de708943a80d363cd239ce4, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6876552679761697109, guid: 61602b721de708943a80d363cd239ce4, type: 3}
       propertyPath: openMechanism
       value: 
@@ -17432,6 +17444,10 @@ PrefabInstance:
     - target: {fileID: 8170216167074486724, guid: 15906108ccc7749498d519a25e409943, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170216167074486726, guid: 15906108ccc7749498d519a25e409943, type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8170216167074486731, guid: 15906108ccc7749498d519a25e409943, type: 3}
       propertyPath: m_Name
