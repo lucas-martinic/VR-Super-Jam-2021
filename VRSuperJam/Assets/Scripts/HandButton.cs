@@ -8,6 +8,7 @@ public class HandButton : XRBaseInteractable
 
     [SerializeField] private float yMin = 0.0f;
     [SerializeField] float yMax = 0.0f;
+    [SerializeField] bool physicsButton;
     private bool previousPress = false;
     private AudioSource audioSource;
 
@@ -19,6 +20,9 @@ public class HandButton : XRBaseInteractable
         onHoverEntered.AddListener(StartPress);
         onHoverExited.AddListener(EndPress);
         audioSource = GetComponent<AudioSource>();
+        if (physicsButton) {
+            GetComponent<Collider>().isTrigger = true;
+        }
     }
 
     private void OnDestroy() {
@@ -41,6 +45,17 @@ public class HandButton : XRBaseInteractable
 
     private void Start() {
         SetMinMax();
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if(physicsButton && other.CompareTag("PhysicPusher")) {
+            SetYPosition(yMin);
+            OnPress.Invoke();
+            if (audioSource != null) {
+                audioSource.Play();
+            }
+            GetComponent<Collider>().isTrigger = false;
+        }
     }
 
     private void SetMinMax() {

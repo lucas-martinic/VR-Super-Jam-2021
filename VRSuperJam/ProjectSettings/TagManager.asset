@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Gravity
   - Key
+  - PhysicPusher
   layers:
   - Default
   - TransparentFX

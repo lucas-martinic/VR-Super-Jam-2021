@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -30,5 +27,18 @@ public class LightEmitter : MonoBehaviour
         if (!audioSource.isPlaying) {
             audioSource.Play();
         }
+    }
+
+    [ContextMenu("Activate")]
+    public void Debug_Activate() {
+        colorPoint.Grabbed();
+        if (!audioSource.isPlaying) {
+            audioSource.Play();
+        }
+        colorPoint.grounded = true;
+    }
+    [ContextMenu("Deactivate")]
+    public void Debug_Deactivate() {
+        colorPoint.grounded = false;
     }
 }
