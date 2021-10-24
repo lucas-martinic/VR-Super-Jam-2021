@@ -8,6 +8,7 @@ public class Door : MonoBehaviour
     [SerializeField] HandButton openMechanism;
     private AudioSource audioSource;
     bool opened;
+    [SerializeField] bool openUp;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,11 @@ public class Door : MonoBehaviour
             audioSource.Play();
         }
         for (float i = 0; i < 1.5f; i += Time.deltaTime) {
-            transform.position += transform.right * Time.deltaTime;
+            if (openUp) {
+                transform.position += transform.up * Time.deltaTime * 2;
+            } else {
+                transform.position += transform.right * Time.deltaTime;
+            }
             yield return null;
         }
     }
