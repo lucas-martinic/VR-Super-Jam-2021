@@ -9087,7 +9087,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\"Hold your \nfist\" against \noppression..."
+  m_text: "HOLD YOUR FIST against \ndarkness..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a2395455de48de4e90b94e9d0724478, type: 2}
   m_sharedMaterial: {fileID: -3563743150703201633, guid: 6a2395455de48de4e90b94e9d0724478, type: 2}
@@ -9096,8 +9096,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 3623878656
-  m_fontColor: {r: 0, g: 0, b: 0, a: 0.84705883}
+    rgba: 3629061105
+  m_fontColor: {r: 0.9433962, g: 0.07475963, b: 0.31109533, a: 0.84705883}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
