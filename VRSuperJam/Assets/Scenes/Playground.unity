@@ -5769,7 +5769,7 @@ MonoBehaviour:
   gravityInsideSphere: 0
   randomPushUpwardsWhenGravityOff: 1
   dominantHandRight: 1
-  sphereMaxSize: 3
+  sphereMaxSize: 4
   sphereShrinkingSpeed: 8
   sphereGrowingSpeed: 4
   attractionSpeed: 18
