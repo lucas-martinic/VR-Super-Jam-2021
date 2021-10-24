@@ -18,6 +18,7 @@ public class Door : MonoBehaviour
         openButton.OnPress.RemoveListener(OpenDoor);
     }
 
+    [ContextMenu("OpenDoor")]
     private void OpenDoor() {
         if(!opened)
             StartCoroutine(Co_OpenDoor());

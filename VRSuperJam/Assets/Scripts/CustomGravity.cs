@@ -52,6 +52,6 @@ public class CustomGravity : MonoBehaviour
 
     IEnumerator ForceUp() {
         yield return new WaitForSeconds(Random.Range(0.3f, 0.6f));
-        rigidBody.AddForce(Vector3.up * Random.Range(1f, 3f));
+        rigidBody.AddForce(Vector3.up * Random.Range(2f, 6f));
     }
 }

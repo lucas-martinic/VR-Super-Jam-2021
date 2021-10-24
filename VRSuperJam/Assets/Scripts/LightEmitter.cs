@@ -27,5 +27,8 @@ public class LightEmitter : MonoBehaviour
 
     private void Grabbed(SelectEnterEventArgs arg0) {
         colorPoint.Grabbed();
+        if (!audioSource.isPlaying) {
+            audioSource.Play();
+        }
     }
 }

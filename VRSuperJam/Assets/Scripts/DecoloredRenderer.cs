@@ -7,10 +7,12 @@ public class DecoloredRenderer : MonoBehaviour {
         _renderer = GetComponent<Renderer>();
         Color _color = _renderer.material.color;
         float smoothness = _renderer.material.GetFloat("_Glossiness");
+        float metallic = _renderer.material.GetFloat("_Metallic");
         Texture texture = _renderer.material.mainTexture;
         _renderer.material = new Material(GameManager.Instance.decoloredMaterial);
         _renderer.material.color = _color;
         _renderer.material.SetFloat("_Glossiness", smoothness);
+        _renderer.material.SetFloat("_Metallic", metallic);
         if (texture != null) {
             _renderer.material.mainTexture = texture;
         }
