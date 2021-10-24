@@ -9,7 +9,8 @@ public class BraceletPowers : MonoBehaviour
 {
     [SerializeField] GameObject lantern;
     [SerializeField] GameObject bracelet;
-    XRController leftController;
+    [SerializeField] XRController leftController;
+    [SerializeField] CustomGravity customGravity;
     bool hasBracelet = false;
     bool transformControlActive = false;
     bool playerHoldingLantern = false;
@@ -25,16 +26,30 @@ public class BraceletPowers : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        leftController = GetComponent<XRController>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (hasBracelet)
+        if (hasBracelet && leftController.inputDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
         {
-            GetVariance();
-            TransformControl();
+            if (triggerValue > 0.5)
+            {
+                customGravity.enabled = false;
+                GetVariance();
+                TransformControl();
+                if (!transformControlActive)
+                {
+                    GetInitialPositions();
+                    transformControlActive = true;
+                }
+            }
+            else
+            {
+                transformControlActive = false;
+                customGravity.enabled = true;
+            }
         }
     }
 
@@ -42,28 +57,25 @@ public class BraceletPowers : MonoBehaviour
     {
         hasBracelet = !hasBracelet;
         leftController.SendHapticImpulse(1, 0.2f);
-        // print("Bracelet attached/detached");
+        print("Bracelet attached/detached");
     }
 
-/*    void SetPlayerHoldingLanternActive()
+    void SetPlayerHoldingLanternActive()
     {
         playerHoldingLantern = !playerHoldingLantern;
-    }*/
+    }
 
     public void GetInitialPositions()
     {
-        if (hasBracelet)  //  && leftController.inputDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue)
-        {
-            GetTransformOfLantern();
+            // GetTransformOfLantern();
             GetTransformOfBracelet();
             print(initialBraceletPosition);
-        }
     }
 
-    void GetTransformOfLantern()
+/*    void GetTransformOfLantern()
     {
         initialLanternPosition = lantern.transform.position;
-    }
+    }*/
 
     void GetTransformOfBracelet()
     {
@@ -72,16 +84,13 @@ public class BraceletPowers : MonoBehaviour
 
     void GetVariance()
     {
-        varianceX = braceletPosition.x - initialBraceletPosition.x;
-        varianceY = braceletPosition.y - initialBraceletPosition.y;
-        varianceZ = braceletPosition.z - initialBraceletPosition.z;
+        varianceX = bracelet.transform.position.x - initialBraceletPosition.x;
+        varianceY = bracelet.transform.position.y - initialBraceletPosition.y;
+        varianceZ = bracelet.transform.position.z - initialBraceletPosition.z;
     }
 
     void TransformControl()
-    {
-        if (hasBracelet && leftController.inputDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool triggerButton))
-        {
-            initialLanternPosition += new Vector3(varianceX, varianceY, varianceZ);
-        }
+    { 
+        lantern.transform.position += new Vector3(varianceX, varianceY, varianceZ);
     }
 }

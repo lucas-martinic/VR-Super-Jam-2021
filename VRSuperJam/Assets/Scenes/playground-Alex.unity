@@ -292,6 +292,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8989474934445105995, guid: 0817afd1444874d478d889118a7d1d96, type: 3}
   m_PrefabInstance: {fileID: 8989474935031114021}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &232928666 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8989474934445106007, guid: 0817afd1444874d478d889118a7d1d96, type: 3}
+  m_PrefabInstance: {fileID: 8989474935031114021}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae26e19cd956134bbdf3c6f65bf393a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &434772249
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,7 +925,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 396459207892262425, guid: aa45b9efe56f545438fd5179dc849075, type: 3}
   m_PrefabInstance: {fileID: 396459208233687195}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &753550986
+--- !u!114 &753550979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -926,8 +937,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f82ff7e8c245c0444b00f423c0f85d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lantern: {fileID: 0}
-  bracelet: {fileID: 0}
+  lantern: {fileID: 1718240573}
+  bracelet: {fileID: 753550978}
+  leftController: {fileID: 232928666}
+  customGravity: {fileID: 1718240577}
 --- !u!1 &920231555
 GameObject:
   m_ObjectHideFlags: 0
@@ -2570,7 +2583,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 1490445526}
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 4294967295
   m_AttachTransform: {fileID: 0}
   m_StartingSelectedInteractable: {fileID: 0}
   m_HoverEntered:
@@ -2582,7 +2595,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 753550986}
+      - m_Target: {fileID: 753550979}
         m_TargetAssemblyTypeName: BraceletPowers, Assembly-CSharp
         m_MethodName: SetHasBracelet
         m_Mode: 1
@@ -2597,7 +2610,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 753550986}
+      - m_Target: {fileID: 753550979}
         m_TargetAssemblyTypeName: BraceletPowers, Assembly-CSharp
         m_MethodName: SetHasBracelet
         m_Mode: 1
@@ -2804,6 +2817,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1718240573 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4579788630909120694, guid: 351e9ed1f987916449cd312917edb0c1, type: 3}
+  m_PrefabInstance: {fileID: 4579788630778952267}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1718240577 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4579788630909120840, guid: 351e9ed1f987916449cd312917edb0c1, type: 3}
+  m_PrefabInstance: {fileID: 4579788630778952267}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718240573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38cd46aea718860418281d9ee28ae89d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1739109742
 GameObject:
   m_ObjectHideFlags: 0
@@ -3220,18 +3249,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 396459207892262424, guid: aa45b9efe56f545438fd5179dc849075, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 396459207892262425, guid: aa45b9efe56f545438fd5179dc849075, type: 3}
       propertyPath: m_Name
       value: Bracelet parent interactable
       objectReference: {fileID: 0}
     - target: {fileID: 396459207892262425, guid: aa45b9efe56f545438fd5179dc849075, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 396459207892262429, guid: aa45b9efe56f545438fd5179dc849075, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 396459207892262430, guid: aa45b9efe56f545438fd5179dc849075, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 396459207892262430, guid: aa45b9efe56f545438fd5179dc849075, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 396459207892262430, guid: aa45b9efe56f545438fd5179dc849075, type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 396459207892262431, guid: aa45b9efe56f545438fd5179dc849075, type: 3}
+      propertyPath: m_MovementType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 396459207892262431, guid: aa45b9efe56f545438fd5179dc849075, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 396459207892262431, guid: aa45b9efe56f545438fd5179dc849075, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1490445526}
+    - target: {fileID: 396459207892262431, guid: aa45b9efe56f545438fd5179dc849075, type: 3}
+      propertyPath: m_InteractionLayerMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 396459207892262431, guid: aa45b9efe56f545438fd5179dc849075, type: 3}
       propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -3411,8 +3472,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8989474934445105994, guid: 0817afd1444874d478d889118a7d1d96, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989474934445105994, guid: 0817afd1444874d478d889118a7d1d96, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989474934445105994, guid: 0817afd1444874d478d889118a7d1d96, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetInitialPositions
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989474934445105994, guid: 0817afd1444874d478d889118a7d1d96, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BraceletPowers, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989474934445105994, guid: 0817afd1444874d478d889118a7d1d96, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8989474934850631415, guid: 0817afd1444874d478d889118a7d1d96, type: 3}
       propertyPath: m_InteractionManager

@@ -5,7 +5,7 @@ public class CustomGravity : MonoBehaviour
 {
     private Rigidbody rigidBody;
     private bool affectedByGravity;
-    [SerializeField] bool forceGravity;
+    public bool forceGravity;
 
     void Awake()
     {
