@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Gravity
+  - Key
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - Body
   - Enviroment
   - Interactables
-  - 
+  - Key
   - 
   - 
   - 

@@ -1,25 +1,31 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Door : MonoBehaviour
 {
-    [SerializeField] HandButton openButton;
+    [SerializeField] XRBaseInteractable openMechanism;
     private AudioSource audioSource;
     bool opened;
 
     // Start is called before the first frame update
     void Start()
     {
-        openButton.OnPress.AddListener(OpenDoor);
+        if(openMechanism != null) {
+            openMechanism.selectEntered.AddListener(OpenDoor);
+        }
         audioSource = GetComponent<AudioSource>();
     }
 
     private void OnDestroy() {
-        openButton.OnPress.RemoveListener(OpenDoor);
+        if (openMechanism != null) {
+            openMechanism.selectEntered.RemoveListener(OpenDoor);
+        }
     }
 
     [ContextMenu("OpenDoor")]
-    private void OpenDoor() {
+    private void OpenDoor(SelectEnterEventArgs arg0) {
         if(!opened)
             StartCoroutine(Co_OpenDoor());
     }
