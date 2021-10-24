@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Materials")]
     public Material invisibleMaterial;
+    public Material decoloredMaterial;
 
     void Awake()
     {
