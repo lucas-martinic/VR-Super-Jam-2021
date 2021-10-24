@@ -6,6 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class KeySocket : MonoBehaviour
 {
     XRInteractionManager interactionManager;
+    [SerializeField] Transform keyPlacement;
     Door door;
 
     private void Start() {
@@ -25,8 +26,9 @@ public class KeySocket : MonoBehaviour
     }
 
     private IEnumerator AttachKeyOpenDoor(GameObject key) {
-        key.transform.SetParent(this.transform);
+        key.transform.SetParent(keyPlacement.transform);
         key.transform.localPosition = Vector3.zero;
+        key.transform.localRotation = Quaternion.identity;
         door.OpenDoor();
         yield return new WaitForSeconds(1);
         Destroy(key.gameObject);
