@@ -13,12 +13,14 @@ public class InvisibleObject : MonoBehaviour
         _renderer.material = new Material(GameManager.Instance.invisibleMaterial);
         _renderer.material.color = _color;
         _collider.isTrigger = true;
+        _renderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
     }
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Gravity")) {
             if(_collider != null) {
                 _collider.isTrigger = false;
+                _renderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
             }
         }
     }
@@ -27,6 +29,7 @@ public class InvisibleObject : MonoBehaviour
         if (other.CompareTag("Gravity")) {
             if(_collider != null) {
                  _collider.isTrigger = true;
+                _renderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
             }
         }
     }
