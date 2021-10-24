@@ -7,12 +7,14 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Key : MonoBehaviour
 {
     private XRGrabInteractable interactable;
+    private AudioSource audioSource;
     private bool stopRotating;
 
     // Start is called before the first frame update
     void Start()
     {
         interactable = GetComponent<XRGrabInteractable>();
+        audioSource = GetComponent<AudioSource>();
         if (interactable != null) {
             interactable.selectEntered.AddListener(Grabbed);
         }
@@ -20,6 +22,7 @@ public class Key : MonoBehaviour
 
     private void Grabbed(SelectEnterEventArgs arg0) {
         stopRotating = true;
+        audioSource.Play();
     }
 
     private void Update() {
