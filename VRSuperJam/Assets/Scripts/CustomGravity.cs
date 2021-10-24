@@ -10,6 +10,7 @@ public class CustomGravity : MonoBehaviour
     void Awake()
     {
         rigidBody = GetComponent<Rigidbody>();
+        GravityOn();
     }
 
     void Update()
