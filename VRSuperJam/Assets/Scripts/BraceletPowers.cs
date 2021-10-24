@@ -91,6 +91,6 @@ public class BraceletPowers : MonoBehaviour
 
     void TransformControl()
     { 
-        lantern.transform.position += new Vector3(varianceX, varianceY, varianceZ);
+        lantern.transform.position += new Vector3(varianceX/5, varianceY/5, varianceZ/5);
     }
 }
