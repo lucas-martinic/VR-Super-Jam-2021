@@ -25,7 +25,8 @@ public class InvisibleObject : MonoBehaviour
         float metallic = _renderer.material.GetFloat("_Metallic");
         _renderer.material = new Material(GameManager.Instance.invisibleMaterial);
         _renderer.material.color = _color;
-        _collider.isTrigger = true;
+        if(_collider != null)
+            _collider.isTrigger = true;
         _renderer.material.SetFloat("_Glossiness", smoothness);
         _renderer.material.SetFloat("_Metallic", metallic);
         _renderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
