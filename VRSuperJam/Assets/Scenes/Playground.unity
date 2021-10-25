@@ -1858,9 +1858,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: df1aefbafda06f544834fe5382deec80, type: 3}
+  m_audioClip: {fileID: 8300000, guid: db4d9dca7f480aa4587dca99e462e5b5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1871,7 +1871,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -3234,6 +3234,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8170216167074486726, guid: 15906108ccc7749498d519a25e409943, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: be6d309f3cf662f40b28f8d404762822, type: 3}
     - target: {fileID: 8170216167074486726, guid: 15906108ccc7749498d519a25e409943, type: 3}
       propertyPath: rolloffMode
       value: 1
@@ -52873,6 +52877,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8170216167074486726, guid: 15906108ccc7749498d519a25e409943, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: be6d309f3cf662f40b28f8d404762822, type: 3}
+    - target: {fileID: 8170216167074486726, guid: 15906108ccc7749498d519a25e409943, type: 3}
       propertyPath: rolloffMode
       value: 1
       objectReference: {fileID: 0}
@@ -54360,6 +54368,14 @@ PrefabInstance:
     - target: {fileID: 4378022940152438930, guid: ee4e4d7bdf3a83942aaf3571e6d4776b, type: 3}
       propertyPath: m_Name
       value: Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 7363398066202480403, guid: ee4e4d7bdf3a83942aaf3571e6d4776b, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eb0c28f07364cf14bb2c792e34e2b99e, type: 3}
+    - target: {fileID: 7363398066202480403, guid: ee4e4d7bdf3a83942aaf3571e6d4776b, type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee4e4d7bdf3a83942aaf3571e6d4776b, type: 3}
@@ -66843,7 +66859,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 27e2d3f4ed69b7440ba611d8f4225e94, type: 3}
+  m_audioClip: {fileID: 8300000, guid: be6d309f3cf662f40b28f8d404762822, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -75155,7 +75171,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-7720
+  m_Name: pb_Mesh-2208
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -76554,6 +76570,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Key
       objectReference: {fileID: 0}
+    - target: {fileID: 7363398066202480403, guid: ee4e4d7bdf3a83942aaf3571e6d4776b, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eb0c28f07364cf14bb2c792e34e2b99e, type: 3}
+    - target: {fileID: 7363398066202480403, guid: ee4e4d7bdf3a83942aaf3571e6d4776b, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7995349850572928382, guid: ee4e4d7bdf3a83942aaf3571e6d4776b, type: 3}
       propertyPath: m_InteractionManager
       value: 
@@ -77660,6 +77684,10 @@ PrefabInstance:
       value: DoorButton
       objectReference: {fileID: 0}
     - target: {fileID: 6876552679761697108, guid: 61602b721de708943a80d363cd239ce4, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: be6d309f3cf662f40b28f8d404762822, type: 3}
+    - target: {fileID: 6876552679761697108, guid: 61602b721de708943a80d363cd239ce4, type: 3}
       propertyPath: rolloffMode
       value: 1
       objectReference: {fileID: 0}
@@ -78129,6 +78157,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8170216167074486726, guid: 15906108ccc7749498d519a25e409943, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: be6d309f3cf662f40b28f8d404762822, type: 3}
     - target: {fileID: 8170216167074486726, guid: 15906108ccc7749498d519a25e409943, type: 3}
       propertyPath: rolloffMode
       value: 1
