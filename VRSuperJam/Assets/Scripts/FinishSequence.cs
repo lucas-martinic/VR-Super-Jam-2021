@@ -23,14 +23,14 @@ public class FinishSequence : MonoBehaviour
         xrRigRigidBody.AddForceAtPosition(-xrRigRigidBody.transform.right, camera.position);
         audioSource.PlayOneShot(hit);
         audioSource.PlayOneShot(turnOff);
-        screenFade.fadeTime = 3;
+        screenFade.fadeTime = 5;
         screenFade.FadeOut();
         movementProvider.enabled = false;
         StartCoroutine(LoadNextScene());
     }
 
     IEnumerator LoadNextScene() {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(12);
         SceneManager.LoadScene(1);
     }
 }
